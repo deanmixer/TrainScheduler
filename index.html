@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="https://static.thenounproject.com/png/7903-200.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+</head>
+<body>
+<!-- 	<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  		<h5 class="my-0 mr-md-auto font-weight-normal">Any Time is Train Time</h5> -->
+<!--   		<nav class="my-2 my-md-0 mr-md-3">
+    		<a class="p-2 text-dark" href="#">Features</a>
+    		<a class="p-2 text-dark" href="#">Enterprise</a>
+    		<a class="p-2 text-dark" href="#">Support</a>
+    		<a class="p-2 text-dark" href="#">Pricing</a>
+  		</nav> -->
+<!--   		<a class="nav-link dropdown-toggle p-2 text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Log in</a>
+        	<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          		<a class="dropdown-item" href="#">Action</a>
+          		<a class="dropdown-item" href="#">Another action</a>
+  				<a class="btn btn-outline-primary" href="#">Log in</a>
+        	</div>
+  		<a class="btn btn-outline-primary" href="#">Log in</a>
+	</div> -->
+	<div class="col-md-10 mx-auto">
+		<div class="jumbotron" style="margin-bottom:15px; padding-top:40px; padding-bottom:40px;">
+	  		<h1 class="display-4">Any Time is Train Time</h1>
+	  		<p class="lead">Choo Choo. Chee Chee.</p>
+		</div>
+	</div>
+	<div class="col-md-10 mx-auto" style="margin-bottom:15px;">
+		<div class="card">
+	  		<h5 class="card-header">Current Train Schedule</h5>
+			<div class="card-body table-responsive-lg">
+				<table class="table table-sm table-hover" id="train-table">
+				 	<thead>
+	    				<tr>
+	      					<th scope="col">Train Name</th>
+	      					<th scope="col">Destination</th>
+	      					<th scope="col">Frequency (min)</th>
+	      					<th scope="col">Next Arrival</th>
+	      					<th scope="col">Minutes Away</th>
+	    				</tr>
+	  				</thead>
+	  				<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-10 mx-auto" style="margin-bottom:15px;">
+		<div class="card">
+	  		<h5 class="card-header">Add Train</h5>
+			<form class="card-body">
+		  		<div class="form-group">
+		    		<label for="trainName">Train Name</label>
+		    		<input type="text" class="form-control" id="trainName" aria-describedby="emailHelp">
+				</div>
+		  		<div class="form-group">
+		    		<label for="trainDestination">Destination</label>
+		    		<input type="text" class="form-control" id="trainDestination">
+		  		</div>
+		  	  	<div class="form-group">
+		    		<label for="trainTime">First Train Time (HH:mm - military time)</label>
+		    		<input type="text" class="form-control" id="trainTime">
+		  		</div>
+		  	  	<div class="form-group">
+		    		<label for="trainFreq">Frequency (min)</label>
+		    		<input type="text" class="form-control" id="trainFreq">
+		  		</div>
+		  		<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>

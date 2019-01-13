@@ -1,0 +1,27 @@
+body {
+/*    background-color: #f2f2f2;*/
+/*	background-color: black;*/
+}
+
+.jumbotron {
+    background-image: url("../images/train.jpg"); 
+    background-size: cover; 
+    height: 500px; 	
+}
+
+@media only screen and (max-width: 768px) {
+	.jumbotron {
+    	height: 250px; 
+    	background-image: none;
+	}
+
+	h1, p {
+/*		color: white;*/
+	}
+}
+
+@media only screen and (max-width: 640px) {
+.junbrotron {
+    height: 100px; 
+}
+}
